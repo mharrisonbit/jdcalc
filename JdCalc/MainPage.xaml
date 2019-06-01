@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             x:Class="JdCalc.MainPage"
+             Visual="Material"
+             BackgroundColor="LightBlue">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <Label Text="JD's Calculator"
+                   HorizontalOptions="Center"/>
+        </Frame>
+        <Frame Grid.Row="1"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Entry Placeholder="Home Value"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+                <Entry Placeholder="Down Payment"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+                <Entry Placeholder="Loan Amount"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+                <Entry Placeholder="Intrest Rate"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
+                <Entry Placeholder="Loan Term Years"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+                <Entry Placeholder="Property Tax"
+                       Grid.Row="2"
+                       Grid.Column="1"/>
+                <Entry Placeholder="PMI"
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+                <Entry Placeholder="Home Insurance"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+                <Picker Grid.Row="4"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Title="Loan Type"
+                        x:Name="LoanType">
+                    <Picker.Items>
+                        <x:String>VA</x:String> 
+                        <x:String>FHA</x:String>
+                        <x:String>Conventional</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button Text="Calculate"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Clicked="CalcBtnClickedAsync"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>
