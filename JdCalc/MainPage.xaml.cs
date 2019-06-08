@@ -4,8 +4,6 @@ using System;
 
 namespace JdCalc
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
@@ -17,17 +15,16 @@ namespace JdCalc
         public async void CalcBtnClickedAsync(object sender, EventArgs e)
         {
             string loanType = "";
-            Console.WriteLine(LoanType.SelectedItem);
             switch (LoanType.SelectedItem.ToString())
             {
                 case "FHA":
-                    loanType = "test";
+                    loanType = "FHA";
                     break;
                 case "VA":
-                    loanType = "test";
+                    loanType = "VA";
                     break;
                 case "Conventional":
-                    loanType = "test";
+                    loanType = "Conventional";
                     break;
             }
 
